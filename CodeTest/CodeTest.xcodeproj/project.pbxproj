@@ -12,6 +12,7 @@
 		1BDBFB111DC7991A00674A57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BDBFB0F1DC7991A00674A57 /* Main.storyboard */; };
 		1BDBFB131DC7991A00674A57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BDBFB121DC7991A00674A57 /* Assets.xcassets */; };
 		1BDBFB161DC7991A00674A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BDBFB141DC7991A00674A57 /* LaunchScreen.storyboard */; };
+		1BDBFB1E1DC7A41F00674A57 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDBFB1D1DC7A41F00674A57 /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1BDBFB121DC7991A00674A57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BDBFB151DC7991A00674A57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BDBFB171DC7991A00674A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BDBFB1D1DC7A41F00674A57 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				1BDBFB0B1DC7991A00674A57 /* AppDelegate.swift */,
 				1BDBFB0D1DC7991A00674A57 /* ViewController.swift */,
+				1BDBFB1D1DC7A41F00674A57 /* MovieTableViewCell.swift */,
 				1BDBFB0F1DC7991A00674A57 /* Main.storyboard */,
 				1BDBFB121DC7991A00674A57 /* Assets.xcassets */,
 				1BDBFB141DC7991A00674A57 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				1BDBFB0E1DC7991A00674A57 /* ViewController.swift in Sources */,
 				1BDBFB0C1DC7991A00674A57 /* AppDelegate.swift in Sources */,
+				1BDBFB1E1DC7A41F00674A57 /* MovieTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

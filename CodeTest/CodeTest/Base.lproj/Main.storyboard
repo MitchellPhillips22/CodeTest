@@ -25,17 +25,36 @@
                                 <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H0i-vu-QUs">
+                                <rect key="frame" x="0.0" y="66" width="375" height="601"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieCell" id="Feu-Ct-2XS" customClass="MovieTableViewCell" customModule="CodeTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Feu-Ct-2XS" id="hOn-vp-hKh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="H0i-vu-QUs" secondAttribute="trailing" id="J4o-ed-RIw"/>
+                            <constraint firstItem="H0i-vu-QUs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SFr-CI-Ip0"/>
                             <constraint firstAttribute="trailing" secondItem="7Er-FI-Bve" secondAttribute="trailing" id="Yod-Fy-vTm"/>
                             <constraint firstItem="7Er-FI-Bve" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cQ8-eS-uyM"/>
                             <constraint firstItem="7Er-FI-Bve" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="2" id="dCt-sE-nHQ"/>
+                            <constraint firstItem="H0i-vu-QUs" firstAttribute="top" secondItem="7Er-FI-Bve" secondAttribute="bottom" id="kAq-qk-UAS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H0i-vu-QUs" secondAttribute="bottom" id="tVl-ST-BP1"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="7Er-FI-Bve" id="qPf-U1-pcf"/>
                         <outlet property="searchDisplayController" destination="g8q-oI-6Q2" id="PJA-ev-7JX"/>
+                        <outlet property="tableView" destination="H0i-vu-QUs" id="yVf-Ku-NnH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
