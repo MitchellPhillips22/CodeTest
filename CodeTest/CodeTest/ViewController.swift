@@ -57,35 +57,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func ctn(ctn: NSURLConnection!, receivedData d: NSData!) {
         // add the received data to the data object self.d.appendData(d)
     }
+     
     func ctnFinishedLoading(ctn: NSURLConnection!) {
-        // self.d should hold the resulting info, request is complete
-        // received data is converted into an object through JSON deserialization
+
         var err: NSError
-        var jResult: NSDictionary = JSONSerialization.jsonObject(with: d as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-        if jResult.count>0 && jResult["results"].count>0 {
-            var results: NSArray = jResult["results"] as! NSArray
-            self.tData = results
-            self.tableView.reloadData()
-        }
+        do {
+            var jResult = try JSONSerialization.jsonObject(with: d as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! JSONDictionary
+            if jResult.count > 0 {
+                var results: NSArray = jResult["results"] as! NSArray
+                self.tData = results
+                self.tableView.reloadData()
+            }
+
+            } catch {
+                print("unable to parse JSON")
+            }
+        
+        
     }
-    
-//    func ctnFinishedLoading(ctn: NSURLConnection!) {
-//
-//        var err: NSError
-//        do {
-//            var jResult = try JSONSerialization.jsonObject(with: d as Data, options: JSONSerialization.ReadingOptions.mutableContainers) as! JSONDictionary
-//            if jResult.count > 0 {
-//                var results: NSArray = jResult["results"] as! NSArray
-//                self.tData = results
-//                self.tableView.reloadData()
-//            }
-//
-//            } catch {
-//                print("unable to parse JSON")
-//            }
-//        
-//        
-//    }
     
       func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tData.count
